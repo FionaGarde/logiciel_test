@@ -27,19 +27,25 @@ class Hippo
         $eat = $weight + 1000;
     }
 
-    public function hippoFight() {        
-        $hippo1 = new Hippo();
-        $hippo2 = new Hippo();
-
-        if($this->weight.$hippo1 < $this->weight.$hippo2){
+    public function hippoFight($hippo2) {   
+        if($this->weight < $hippo2->weight){
             return $hippo2;
         }
-        elseif($this->weight.$hippo1 > $this->weight.$hippo2){
-            return $hippo2;
+        elseif($this->weight > $hippo2->weight){
+            return $this;
         }
-        else($this->weight.$hippo1 == $this->weight.$hippo2){
+        else($this->weight == $hippo2->weight){
             return echo "match null";
         }
     }
 
+    public function __toString(){
+        return 'L\'hippopotame se nomme '.$name.'. Il pèse '.$weight.' grammes et mesure '.$tusksSize.' centimètres.';
+    }
+
 }
+
+
+$hippo1 = new Hippo();
+$hippo2 = new Hippo();
+$hippo1->hippoFight($hippo2)

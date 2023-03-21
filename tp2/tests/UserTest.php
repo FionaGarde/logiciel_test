@@ -26,7 +26,7 @@ class UserTest extends TestCase
     $this->assertEquals('crys',$lastname);
   }
 
-  public function testSubNotValid() {
+  public function testLastnameNotValid() {
     $lastname = new User();
     $lastname = $lastname->lastname(42);
     $this->assertNotEquals(43,$lastname);

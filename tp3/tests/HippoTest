@@ -1,0 +1,124 @@
+<?php
+namespace Test;
+
+use PHPUnit\Framework\TestCase;
+use App\User;
+
+class HippoTest extends TestCase
+{
+
+
+  // hippo
+  public function tesHipponameValid() {
+    $hippo = new Hippo();
+    $name = $name->name('julien');
+    $weight = $weight->weight(500);
+    $tusksSize = $tusksSize->tusksSize(2);
+    $this->assertEquals('julien', 500, 2, $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name(5);
+    $weight = $weight->weight('lucky');
+    $tusksSize = $tusksSize->tusksSize('rctvyb');
+    $this->assertEquals(5, 'lucky', 'rctvyb', $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name('j');
+    $weight = $weight->weight('lucky');
+    $tusksSize = $tusksSize->tusksSize(2);
+    $this->assertEquals('j', 'lucky', 2, $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name('k');
+    $weight = $weight->weight(590);
+    $tusksSize = $tusksSize->tusksSize('gg');
+    $this->assertEquals('k', 590, 'gg', $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name('k');
+    $weight = $weight->weight('lucky');
+    $tusksSize = $tusksSize->tusksSize('l');
+    $this->assertEquals('k', 'lucky', 'l', $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name(5);
+    $weight = $weight->weight(700);
+    $tusksSize = $tusksSize->tusksSize(900);
+    $this->assertEquals(5, 700, 900, $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name(52);
+    $weight = $weight->weight('lucky');
+    $tusksSize = $tusksSize->tusksSize(2);
+    $this->assertEquals(52 'lucky', 2, $hippo);
+  }
+
+  public function testHippoNotValid() {
+    $hippo = new Hippo();
+    $name = $name->name(52);
+    $weight = $weight->weight(540);
+    $tusksSize = $tusksSize->tusksSize('a');
+    $this->assertEquals(52, 540, 'a', $hippo);
+  }
+
+  // swim
+  public function testSwimValid() {
+    $swim = new Hippo();
+    $swim = $swim->swim(490);
+    $this->assertEquals(490, $swim);
+  }
+
+  public function testSwimNotValid() {
+    $swim = new Hippo();
+    $swim = $swim->swim('lo');
+    $this->assertNotEquals('lo', $swim);
+  }
+
+  public function testSwimNotValid() {
+    $swim = new Hippo();
+    $swim = $swim->swim(45.10);
+    $this->assertNotEquals(45.10, $swim);
+  }
+
+  // eat
+  public function testEatValid() {
+    $eat = new Hippo();
+    $eat = $eat->eat(7500);
+    $this->assertNotEquals(7500, $eat);
+  }
+
+  public function testEatNotValid() {
+    $eat = new Hippo();
+    $eat = $eat->eat('lo');
+    $this->assertNotEquals('lo', $eat);
+  }
+
+  // fight
+  public function testHippoFightValid() {
+    $hippoFight = new Hippo;
+    $hippo2 = new Hippo;
+    $hippoFight = $hippoFight->hippoFight($hippo2);
+    $this->assertEquals($hippo2, $hippoFight);
+  }
+
+  // fight
+  public function testHippoFightNotValid() {
+    $hippoFight = new Hippo;
+    $hippo2 = new Hippo;
+    $hippoFight = $hippoFight->hippoFight('hui');
+    $this->assertNotEquals('hui', $hippoFight);
+  }
+
+}
