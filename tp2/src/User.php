@@ -9,7 +9,7 @@ class User
     private $age;
 
     public function __construct($firstname, $lastname, $email, $age) {
-        $this->firstanme = $firstname;
+        $this->firstname = $firstname;
         $this->lastanme = $lastname;
         $this->email = $email;
         $this->age = $age;
