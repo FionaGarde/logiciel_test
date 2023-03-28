@@ -3,9 +3,9 @@ namespace App;
 
 class Hippo
 {
-    private $name;
-    private $weight;
-    private $tusksSize;  //taille des défenses
+    public $name;
+    public $weight;
+    public $tusksSize;  //taille des défenses
 
     public function __construct($name, $weight, $tusksSize) {
         $this->name = $name;
@@ -34,8 +34,8 @@ class Hippo
         elseif($this->weight > $hippo2->weight){
             return $this;
         }
-        else($this->weight == $hippo2->weight){
-            return echo "match null";
+        else{
+            return 'match null';
         }
     }
 
@@ -46,6 +46,6 @@ class Hippo
 }
 
 
-$hippo1 = new Hippo();
-$hippo2 = new Hippo();
-$hippo1->hippoFight($hippo2)
+// $hippo1 = new Hippo();
+// $hippo2 = new Hippo();
+// $hippo1->hippoFight($hippo2);
